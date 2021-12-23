@@ -1,26 +1,15 @@
 <template>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
+  <v-app-bar density="compact" absolute>
+    <v-spacer></v-spacer>
+    <v-avatar>
+      <img
+        src="https://cdn.vuetifyjs.com/images/john.jpg"
+        alt="John"
+      >
+    </v-avatar>
+    <v-btn plain>
+
+      <span>Do Hong Thao</span>
+    </v-btn>
+  </v-app-bar>
 </template>
-
-<script>
-export default{
-    props: ['title']
-}
-</script>
-<style scoped>
-header {
-  width: 100%;
-  height: 5rem;
-  background-color: #5b0463;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header h1 {
-  color: white;
-  margin: 0;
-}
-</style>

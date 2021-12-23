@@ -1,10 +1,14 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import Button from 'ant-design-vue/lib/button';
-import 'ant-design-vue/dist/antd.css';
+import { createApp } from 'vue'
+import App from './App.vue'
+import store from './store/index.js';
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+import router from './router'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const app = createApp(App);
-app.component(Button.name, Button);
+loadFonts()
 
-app.config.productionTip = false;
-app.mount('#app');
+createApp(App).use(router)
+  .use(vuetify)
+  .use(store)
+  .mount('#app')
